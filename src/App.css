@@ -4,3 +4,7 @@
     background-color: black;
 }
 
+.row__posters::-webkit-scrollbar{
+    display:none;
+}
+

@@ -7,7 +7,7 @@ function Banner() {
 
   useEffect(() => {
     async function fetchData() {
-      const request = await axios.get(requests.fetchNetlixOriginals);
+      const request = await axios.get(requests.fetchNetflixOriginals);
       setMovie(
         request.data.results[
           Math.floor(Math.random() * request.data.results.length - 1)
@@ -17,8 +17,6 @@ function Banner() {
     }
     fetchData();
   }, []);
-
-  console.log(movie);
 
   function truncate(string, n) {
     return string?.length > n ? string.substr(0, n - 1) + "..." : string;
@@ -52,7 +50,7 @@ function Banner() {
       <div
         className="banner--fadeBottom"
         style={{
-          height: "7.8rem",
+          height: "7.5rem",
           backgroundImage:
             "linear-gradient(180deg,transparent,rgba(37,37,37,0.61),#111)",
         }}

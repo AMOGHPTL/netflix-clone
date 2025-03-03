@@ -17,7 +17,7 @@ function Nav() {
   }, []);
 
   return (
-    <div className={`transition ease-in duration-150 fixed top-0 w-full z-50 ${show&&"bg-black "}`}>
+    <div className={`transition ease-in-out duration-200 fixed top-0 w-full z-50 ${show&&"bg-black "}`}>
       <div className="flex justify-between items-center">
         <img
           className="object-contain w-40 h-20 pl-[20px] cursor-pointer"
