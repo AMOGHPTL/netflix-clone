@@ -1,2 +1,6 @@
 @import "tailwindcss";
 
+.app{
+    background-color: black;
+}
+
