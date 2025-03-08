@@ -144,7 +144,18 @@ function PlanScreen() {
   // Keeping the return section exactly as it was in your code
   return (
     <div>
-      {subscription && <p className="mb-3 text-sm">Renewal Date: {new Date(subscription?.current_period_end * 1000).toLocaleDateString()}</p>}
+      <p className="border-b border-gray-600 mb-3 pb-2">
+        {`Current Package: ${subscription ? `${subscription?.role}` : "none"}`}
+      </p>
+
+      {subscription && (
+        <p className="mb-3 text-sm">
+          Renewal Date:{" "}
+          {new Date(
+            subscription?.current_period_end * 1000
+          ).toLocaleDateString()}
+        </p>
+      )}
       {Object.entries(products).map(([productId, productData]) => {
         const isCurrentPackage = productData.name?.includes(subscription?.role);
         return (
@@ -161,7 +172,9 @@ function PlanScreen() {
                 !isCurrentPackage && loadCheckout(productData.priceId)
               }
               className={`text-sm w-fit px-4 rounded-sm  ${
-                isCurrentPackage? "bg-gray-500 cursor-not-allowed":"bg-[#e50914] cursor-pointer"
+                isCurrentPackage
+                  ? "bg-gray-500 cursor-not-allowed"
+                  : "bg-[#e50914] cursor-pointer"
               } `}
             >
               {isCurrentPackage ? "Current Package" : "Subscribe"}

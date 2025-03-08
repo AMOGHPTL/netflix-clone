@@ -21,9 +21,6 @@ function ProfileScreen() {
           />
           <div className="w-120 ml-5">
             <h1 className="bg-gray-600 px-3 py-2 mb-3">{user.email}</h1>
-            <p className="border-b border-gray-600 mb-3 pb-2">
-              Plans (Current Plan: Premium)
-            </p>
             <PlanScreen/>
             <button
               onClick={() => auth.signOut()}

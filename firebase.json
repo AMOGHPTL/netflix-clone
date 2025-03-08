@@ -18,7 +18,7 @@
         "headers": [
           {
             "key": "Content-Security-Policy",
-            "value": "default-src 'self'; script-src 'self' https://api.themoviedb.org; connect-src 'self' https://api.themoviedb.org; img-src 'self' https://image.tmdb.org data:;"
+            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://api.themoviedb.org https://js.stripe.com https://apis.google.com https://*.googleapis.com; connect-src 'self' https://api.themoviedb.org https://api.stripe.com https://api.themoviedb.org/3 https://identitytoolkit.googleapis.com https://*.googleapis.com https://*.firebaseio.com https://firestore.googleapis.com; img-src 'self' https://image.tmdb.org https://upload.wikimedia.org https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com https://wallpapers.com data:; style-src 'self' 'unsafe-inline'; frame-src https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com https://connect-js.stripe.com https://accounts.google.com;"
           },
           {
             "key": "X-Content-Type-Options",
